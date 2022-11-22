@@ -26,7 +26,7 @@ class Fibonacci {
    * @param i the index in the Fibonacci sequence
    * @return the Fibonacci number for this index
    */
-  int fib(int i) {
+  int fib(int i){
     if (i == 0) {
       return fib0;
     } else if (i == 1) {
@@ -34,7 +34,7 @@ class Fibonacci {
     } else if (i > 1) {
       return fib(i - 1) + fib (i - 2);
     } else {
-      return -1;
+      throw new IllegalArgumentException();
     }
   }
 }
