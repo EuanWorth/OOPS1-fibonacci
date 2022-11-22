@@ -39,6 +39,31 @@ public class FibonacciTest {
   }
 
   @Test
+  public void fibonacci_returns0_for0() {
+    // ARRANGE
+    Fibonacci fibonacci = new Fibonacci();
+
+    // ACT
+    int result = fibonacci.fib(0);
+
+    // ASSERT
+    assertThat(result).isEqualTo(0);
+  }
+
+
+  @Test
+  public void fibonacci_returns55_for10() {
+    // ARRANGE
+    Fibonacci fibonacci = new Fibonacci();
+
+    // ACT
+    int result = fibonacci.fib(10);
+
+    // ASSERT
+    assertThat(result).isEqualTo(55);
+  }
+
+  @Test
   public void fib_throwsIllegalArgumentException_atMinus1() {
     // ARRANGE
     Fibonacci fibonacci = new Fibonacci();
