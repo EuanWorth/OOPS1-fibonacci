@@ -18,7 +18,8 @@ package uk.ac.cam.ecw66.fibonacci;
 
 /** A class to compute Fibonacci numbers using a simple recursive approach. */
 class Fibonacci {
-
+  final int fib0 = 0;
+  final int fib1 = 1;
   /**
    * Compute a Fibonacci number.
    *
@@ -26,6 +27,14 @@ class Fibonacci {
    * @return the Fibonacci number for this index
    */
   int fib(int i) {
-    throw new UnsupportedOperationException();
+    if (i == 0) {
+      return fib0;
+    } else if (i == 1) {
+      return fib1;
+    } else if (i > 1) {
+      return fib(i - 1) + fib (i - 2);
+    } else {
+      return -1;
+    }
   }
 }
